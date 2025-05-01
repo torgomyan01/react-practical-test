@@ -1,0 +1,43 @@
+.navbarDropdown{
+  color: #fff;
+  position: relative;
+
+  .trigger{
+
+  }
+
+  .body{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    width: 250px;
+    transition: 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    padding: 12px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .bodyItem{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    color: rgba(17, 0, 255, 0.6);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+    &:hover{
+      background: rgba(17, 0, 255, 0.2);
+    }
+  }
+
+  .trigger:focus ~ .body{
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
