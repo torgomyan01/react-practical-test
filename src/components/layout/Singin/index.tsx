@@ -23,10 +23,11 @@ export const SignIn: React.FC = () => {
 
   function startSubmit() {
     if (!login.value || !password.value) {
-      setLogin(defState(login.value, !login.value ? "Email is required" : ""));
-      setPassword(
-        defState(password.value, !password.value ? "Password is required" : ""),
-      );
+      const loginRes = !login.value ? "Email is required" : "";
+      const loginPass = !password.value ? "Password is required" : "";
+
+      setLogin(defState(login.value, loginRes));
+      setPassword(defState(password.value, loginPass));
       return;
     }
 
